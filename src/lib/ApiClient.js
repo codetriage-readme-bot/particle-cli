@@ -115,8 +115,8 @@ class ApiClient {
 		//curl -d username=zachary@particle.io -d password=foobar https://api.particle.io/v1/users
 
 		if (!user || (user === '')
-			|| (!utilities.contains(user, '@'))
-			|| (!utilities.contains(user, '.'))) {
+			|| (!user.includes('@'))
+			|| (!user.includes('.'))) {
 			return when.reject('Username must be an email address.');
 		}
 

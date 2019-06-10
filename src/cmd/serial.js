@@ -21,7 +21,7 @@ const settings = require('../../settings');
 const DescribeParser = require('binary-version-reader').HalDescribeParser;
 const YModem = require('../lib/ymodem');
 
-const SerialBatchParser = require('../lib/SerialBatchParser');
+const SerialBatchParser = require('../lib/serial-batch-parser');
 const SerialTrigger = require('../lib/SerialTrigger');
 const spinnerMixin = require('../lib/spinnerMixin');
 const ensureError = require('../lib/utilities').ensureError;

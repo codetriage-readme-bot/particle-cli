@@ -6,7 +6,7 @@ const Buffer = require('safe-buffer').Buffer;
  * data that was received within that time.
  */
 class SerialBatchParser extends Transform {
-	constructor(options) {
+	constructor(options){
 		super();
 		options = options || {};
 		this.batchTimeout = options.timeout || 250;
@@ -15,29 +15,29 @@ class SerialBatchParser extends Transform {
 		this.setTimeoutFunctions(global.setTimeout, global.clearTimeout);
 	}
 
-	setTimeoutFunctions(setTimeout, clearTimeout) {
+	setTimeoutFunctions(setTimeout, clearTimeout){
 		this.setTimeout = setTimeout;
 		this.clearTimeout = clearTimeout;
 	}
 
-	_transform(chunk, encoding, cb) {
+	_transform(chunk, encoding, cb){
 		this.buffer = Buffer.concat([this.buffer, chunk]);
 		this.updateTimer();
 		cb();
 	}
 
-	_flush(cb) {
+	_flush(cb){
 		this.pushBatch();
 		cb();
 	}
 
-	pushBatch() {
+	pushBatch(){
 		let batch = this.buffer;
 		this.buffer = Buffer.alloc(0);
 		this.push(batch);
 	}
 
-	updateTimer() {
+	updateTimer(){
 		this.clearTimeout(this.batchTimer);
 		this.batchTimer = this.setTimeout(
 			this.pushBatch.bind(this),
