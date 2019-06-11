@@ -372,6 +372,10 @@ const specs = {
 			address: '0x00030000',
 			alt: '0'
 		},
+		radioStack: {
+			address: '0x00001000',
+			alt: '0'
+		},
 		knownApps: {
 			'tinker': 'tinker-0.8.0-rc.27-argon.bin'
 		},
@@ -426,6 +430,10 @@ const specs = {
 			address: '0x00030000',
 			alt: '0'
 		},
+		radioStack: {
+			address: '0x00001000',
+			alt: '0'
+		},
 		knownApps: {
 		},
 		serial: {
@@ -477,6 +485,10 @@ const specs = {
 		},
 		systemFirmwareOne: {
 			address: '0x00030000',
+			alt: '0'
+		},
+		radioStack: {
+			address: '0x00001000',
 			alt: '0'
 		},
 		knownApps: {
@@ -533,6 +545,10 @@ const specs = {
 			address: '0x00030000',
 			alt: '0'
 		},
+		radioStack: {
+			address: '0x00001000',
+			alt: '0'
+		},
 		knownApps: {
 		},
 		serial: {
@@ -584,6 +600,10 @@ const specs = {
 		},
 		systemFirmwareOne: {
 			address: '0x00030000',
+			alt: '0'
+		},
+		radioStack: {
+			address: '0x00001000',
 			alt: '0'
 		},
 		knownApps: {
@@ -639,6 +659,10 @@ const specs = {
 		},
 		systemFirmwareOne: {
 			address: '0x00030000',
+			alt: '0'
+		},
+		radioStack: {
+			address: '0x00001000',
 			alt: '0'
 		},
 		knownApps: {
